@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AlumniCard from '../components/alumnicard';
+import ThemedButton from '../components/themedbutton';
 
 const Alumni = () => {
 const people = [
@@ -89,9 +90,13 @@ const people = [
             name={person.name}
             photo={person.photo}
             />
-
         ))}
- </div>
+     </div>
+     <div className="flex items-center justify-center">
+        <ThemedButton href="/contact">
+          Contact Us!
+        </ThemedButton>
+        </div>
     </div>
   )
 };
