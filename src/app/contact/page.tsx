@@ -4,8 +4,13 @@ export default function Contact() {
 
   return (
     <div>
-      <div>Contact Us</div>
-      <div>Contact Form</div>
+      <h1>Contact Us</h1>
+      <div>Contact Form
+      Contact Form
+      Contact Form
+      Contact Form
+      Contact Form
+      </div>
     </div>
   )
 }
