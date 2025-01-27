@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-0 right-0 w-60 h-screen bg-white bg-opacity-95 z-40 flex flex-col justify-start uppercase">
+          <div className="md:hidden absolute top-0 right-0 w-60 h-screen text-white bg-zinc-800 z-40 flex flex-col justify-start uppercase">
             <ul className="space-y-4 py-4 px-6 text-left">
               <li>
                 <Link href="/" onClick={() => setIsMenuOpen(false)} className="block hover:text-[rgb(219,13,13)]">

@@ -4,8 +4,8 @@ export default function About() {
 
   return (
    <div>
-    <div>
-        About Us
+      <div>
+        <h1>About Us</h1>
       </div>
       <div>
         Our director Mr. Chase specializes in discovering and developing new talent. We have talent in the industry, that have appeared in movies, T.V shows, commercials, magazines, fashion shows, social media ads, music videos, etc.

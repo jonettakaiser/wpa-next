@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Lato } from "next/font/google";
 import "./globals.css";
 
 import Header from './components/header';
 import Footer from './components/footer';
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const lato = Lato({
+  variable: "--font-lato",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "700"] // Specify weights if needed
 });
 
 export const metadata: Metadata = {
@@ -28,9 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className="min-h-screen flex flex-col">
         <Header />
-        <div className="bg-pink pt-10 h-100 flex justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="pt-10 pb-10 flex-grow justify-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {children}
         </div>
         <Footer />
