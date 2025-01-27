@@ -6,11 +6,11 @@ export default function Footer() {
     const currentYear = new Date().getFullYear();
 
   return (
-    <div>
+    <div className='fixed bottom-0 bg-white w-full flex flex-col justify-center items-center p-5 gap-5'>
         <div>
             <img src="/logo.svg" />
         </div>
-        <div>
+        <div className='flex flex-row justify-between w-20'>
             <a href="https://www.instagram.com/worldpremiereartists/" target='_blank'><img src="/instagram.svg" /></a>
             <a href="https://www.facebook.com/worldpremiereartists" target='_blank'><img src="/facebook.svg" /></a>
         </div>
