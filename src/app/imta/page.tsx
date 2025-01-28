@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 import AlumniCard from '../components/alumnicard';
 import ThemedButton from '../components/themedbutton';
@@ -66,7 +67,12 @@ const people = [
   return (
     <div>
       <h1>IMTA History</h1>
-      <img src="/imta.png" className='float-left mr-4 mb-1 w-48' />
+      <Image 
+        src="/imta.png"
+        alt="IMTA logo png"
+        width={200}
+        height={300} 
+        className='float-left mr-4 mb-1 w-48' />
       <p>
         IMTA&apos;s first convention was produced in 1987 in New York City. IMTA quickly became known in the modeling and talent industries as the premiere professional event to scout for the best new faces for the entertainment world. The early days of IMTA saw the discovery of rising stars such as actor Elijah Wood and model Joel West. Throughout the 1990s and into the 21st century, IMTA&apos;s success and influence grew steadily, launching the careers of many of today&apos;s hottest models and actors such as Katie Holmes, Ashton Kutcher, Jessica Biel, Seann William Scott, Brandon Routh, Eva Longoria and Alyson Stoner. Models such as Jessica White, Bradley Tomberlin, Sara Dawson, Kim Lemanton, Sean Harju and Tyson Ballou also began their careers on the IMTA runway.
       </p>

@@ -1,14 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
 
     const currentYear = new Date().getFullYear();
 
   return (
-    <div className='bottom-0 bg-white w-full flex flex-col justify-center items-center p-5 gap-5'>
+    <div className='bottom-0 bg-zinc-50 w-full flex flex-col justify-center items-center p-5 gap-5'>
         <div>
-            <img src="/logo.svg" />
+            <Image 
+                src="/logo.svg"
+                alt="wpa svg logo"
+                width={200}
+                height={200} />
         </div>
         <div className='flex flex-row justify-between gap-5'>
             <a href="https://www.instagram.com/worldpremiereartists/" target='_blank'><img src="/instagram.svg" /></a>

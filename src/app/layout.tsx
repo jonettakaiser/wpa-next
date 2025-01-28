@@ -1,11 +1,12 @@
-'use client'
+'use client';
 
 import { Lato } from "next/font/google";
 import "./globals.css";
+import MetaPixel from './components/metapixel';
 
 import Header from './components/header';
 import Footer from './components/footer';
-import { usePathname } from 'next/navigation'; // Hook to get the current route
+import { usePathname } from 'next/navigation';
 
 const lato = Lato({
   variable: "--font-lato",
@@ -24,6 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <body className={`${lato.variable} min-h-screen flex flex-col`}>
+        {/* Include Meta Pixel */}
+        <MetaPixel />
+
         {/* Conditionally Render Header and Footer */}
         {!isHomePage && (
           <>

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { JSX } from 'react';
 
 export default function Privacy(): JSX.Element {
   return (
@@ -20,7 +20,7 @@ export default function Privacy(): JSX.Element {
 
       <ul className="list-disc ml-5 mb-4">
         <li><strong>Account</strong>: A unique profile created for you to access our services.</li>
-        <li><strong>Affiliate</strong>: An entity that is in control of, controlled by, or under common control with a party, where "control" means holding 50% or more of the shares or other rights to vote for the election of directors.</li>
+        <li><strong>Affiliate</strong>: An entity that is in control of, controlled by, or under common control with a party, where &quot;control&quot; means holding 50% or more of the shares or other rights to vote for the election of directors.</li>
         <li><strong>Company</strong>: Refers to World Premiere Artists.</li>
         <li><strong>Cookies</strong>: Small data files placed on your device to record browsing information.</li>
         <li><strong>Country</strong>: Refers to the United States.</li>
@@ -51,7 +51,7 @@ export default function Privacy(): JSX.Element {
         This data is automatically collected when using our services and may include:
       </p>
       <ul className="list-disc ml-5 mb-4">
-        <li>Device's IP address</li>
+        <li>Device&apos;s IP address</li>
         <li>Browser type and version</li>
         <li>Pages visited on our website</li>
         <li>Time spent on each page</li>

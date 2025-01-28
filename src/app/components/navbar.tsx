@@ -1,8 +1,6 @@
 'use client'
 import React, { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/router"; // Import useRouter for detecting active route
-
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +10,7 @@ const Navbar: React.FC = () => {
       };
 
   return (
-    <nav className="bg-white text-black sticky top-0 z-50">
+    <nav className="bg-white text-black sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-center h-16">
           {/* Logo */}

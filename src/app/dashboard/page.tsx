@@ -6,16 +6,16 @@ import Image from 'next/image';
 
 const Dashboard: React.FC = () => {
   const categories = [
-    { name: 'Adults', link: '/genres/adults', image: '/media/cat-adult.jpg' },
-    { name: 'Teens', link: '/genres/teens', image: '/media/cat-teen.jpg' },
-    { name: 'Tweens', link: '/genres/tweens', image: '/media/cat-tweens.jpg' },
-    { name: 'Children', link: '/genres/children', image: '/media/cat-children.jpg' },
+    { name: 'Adults', link: '/dashboard/adults', image: '/media/cat-adult.jpg' },
+    { name: 'Teens', link: '/dashboard/teens', image: '/media/cat-teen.jpg' },
+    { name: 'Tweens', link: '/dashboard/tweens', image: '/media/cat-tweens.jpg' },
+    { name: 'Children', link: '/dashboard/children', image: '/media/cat-children.jpg' },
   ];
 
   return (
     <div className="bg-gray-100 flex flex-col items-center justify-center p-8">
       <h1 className="text-3xl font-bold mb-8 text-center text-[rgb(219,13,13)]">
-        Main Categories
+        Select Age Group
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 w-full max-w-4xl">
         {categories.map((category, index) => (

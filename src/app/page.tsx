@@ -35,8 +35,10 @@ const Home: React.FC = () => {
 
       {/* Logo */}
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-        <img
+        <Image
           src="/logo-white.svg"
+          width={200}
+          height={300}
           alt="World Premiere Artists Logo"
           className="w-[300px] h-auto"
         />
