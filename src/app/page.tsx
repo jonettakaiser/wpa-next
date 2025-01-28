@@ -39,6 +39,7 @@ const Home: React.FC = () => {
           src="/logo-white.svg"
           width={200}
           height={300}
+          priority
           alt="World Premiere Artists Logo"
           className="w-[300px] h-auto"
         />
