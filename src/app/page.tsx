@@ -15,13 +15,16 @@ const Home: React.FC = () => {
     '/media/bg5.jpg',
   ];
 
+  const totalImages = images.length;
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentImage((prevImage) => (prevImage + 1) % totalImages);
     }, 5000); // Rotate background every 5 seconds
-
+  
     return () => clearInterval(interval); // Cleanup interval
-  }, []);
+  }, [totalImages]);
+  
 
   return (
     <div

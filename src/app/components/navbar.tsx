@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,8 +17,10 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0 p-10">
             <Link href="/">
-              <img
-                src="/logo.svg" // Update the path to your logo in the public folder
+              <Image
+                src="/logo.svg"
+                width={200}
+                height={200}
                 alt="World Premiere Artists"
                 className="h-8 w-auto"
               />
