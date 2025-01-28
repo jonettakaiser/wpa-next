@@ -7,7 +7,7 @@ const LoginPage: React.FC = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const correctPassword = 'mypassword'; // Replace with your desired password
+  const correctPassword = 'famous'; // Replace with your desired password
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();

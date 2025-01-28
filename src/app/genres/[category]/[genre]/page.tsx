@@ -23,7 +23,7 @@ const PDFListPage = async ({ params }: { params: { category: string; genre: stri
   }));
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
+    <div className="bg-gray-100 flex flex-col items-center justify-center p-8">
       <h1 className="text-3xl font-bold mb-8 text-center text-[rgb(219,13,13)]">
         {genre.charAt(0).toUpperCase() + genre.slice(1)} PDFs
       </h1>

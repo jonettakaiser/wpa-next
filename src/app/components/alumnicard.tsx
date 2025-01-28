@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 type AlumniCardProps = {
   name: string;
@@ -13,10 +14,13 @@ const AlumniCard: React.FC<AlumniCardProps> = ({ name, photo }) => {
       {/* Image Wrapper with Gradient and Name */}
       <div className="relative w-full h-full sm:w-60 sm:h-80 md:w-56 md:h-72">
         {/* Image */}
-        <img
+        <Image
           src={photo}
           alt={name}
-          className="w-full h-full object-cover rounded-sm shadow-lg"
+          width={200}
+          height={300}
+          objectFit="cover" // Maintains aspect ratio
+          className="lazy-load w-full h-full object-cover rounded-sm shadow-lg"
         />
 
         {/* Name with Gradient Background */}

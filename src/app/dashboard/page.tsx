@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 const Dashboard: React.FC = () => {
   const categories = [
@@ -11,7 +13,7 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
+    <div className="bg-gray-100 flex flex-col items-center justify-center p-8">
       <h1 className="text-3xl font-bold mb-8 text-center text-[rgb(219,13,13)]">
         Main Categories
       </h1>
@@ -23,9 +25,12 @@ const Dashboard: React.FC = () => {
             className="block bg-white shadow-lg rounded-lg overflow-hidden border-2 border-transparent hover:border-[rgb(219,13,13)] transition-all duration-300"
           >
             <div className="relative w-full h-48">
-              <img
+              <Image
                 src={category.image}
                 alt={category.name}
+                width={200}
+                height={300}
+                objectFit="cover" // Maintains aspect ratio
                 className="w-full h-full object-cover"
               />
             </div>

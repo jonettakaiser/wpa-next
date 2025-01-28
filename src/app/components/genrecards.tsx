@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type GenreCardsProps = {
   subcategories: { name: string; link: string; image: string }[];
@@ -16,9 +17,12 @@ const GenreCards: React.FC<GenreCardsProps> = ({ subcategories }) => {
         >
           {/* Image */}
           <div className="relative w-full h-48">
-            <img
+            <Image
               src={subcategory.image}
               alt={subcategory.name}
+              width={200}
+              height={300}
+              objectFit="cover" // Maintains aspect ratio
               className="w-full h-full object-cover"
             />
           </div>

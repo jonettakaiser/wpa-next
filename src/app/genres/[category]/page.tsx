@@ -11,9 +11,9 @@ const GenresPage = ({ params }: { params: { category: string } }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-8">
+    <div className="bg-gray-100 flex flex-col items-center justify-center p-8">
       <h1 className="text-3xl font-bold mb-8 text-center text-[rgb(219,13,13)]">
-        {category.charAt(0).toUpperCase() + category.slice(1)} Genres
+        {category.charAt(0).toUpperCase() + category.slice(1)}
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-4xl">
         {genres.map((genre, index) => (

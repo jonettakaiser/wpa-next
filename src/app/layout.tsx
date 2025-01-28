@@ -1,39 +1,44 @@
-import type { Metadata } from "next";
+'use client'
+
 import { Lato } from "next/font/google";
 import "./globals.css";
 
 import Header from './components/header';
 import Footer from './components/footer';
+import { usePathname } from 'next/navigation'; // Hook to get the current route
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
-  weight: ["400", "700"], // Specify weights if needed
+  weight: ["400", "700"],
 });
-
-export const metadata: Metadata = {
-  title: "World Premiere Artists",
-  description: "World Premiere Artists is a training company that helps train and develop models and actors to be seen by top celebrity agents and managers.",
-};
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/'; // Check if the current route is the homepage
+
   return (
     <html lang="en" className="h-full">
       <body className={`${lato.variable} min-h-screen flex flex-col`}>
-        {/* Header */}
-        <Header />
+        {/* Conditionally Render Header and Footer */}
+        {!isHomePage && (
+          <>
+            <Header />
+            <main className="flex-grow pt-10 pb-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+              {children}
+            </main>
+            <Footer />
+          </>
+        )}
 
-        {/* Main Content Area */}
-        <main className="pt-10 pb-10 flex-grow justify-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {children}
-        </main>
-
-        {/* Footer */}
-        <Footer />
+        {/* Render only children for homepage */}
+        {isHomePage && (
+          <main className="w-screen h-screen">{children}</main>
+        )}
       </body>
     </html>
   );
