@@ -72,7 +72,7 @@ const Home: React.FC = () => {
         <a
           href="/login"
           className="hover:text-[rgb(219,13,13)] mb-2">
-          Student Login 
+          Student Login
         </a> · 
         <a
           href="/privacy"
