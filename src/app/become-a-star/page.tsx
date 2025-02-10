@@ -86,7 +86,7 @@ export default function Page() {
                   href="/contact"
                   className="inline-flex h-10 items-center justify-center rounded-md bg-red-600 px-8 text-sm font-medium text-white hover:bg-red-700"
                 >
-                  Start Your Journey
+                  Start Your Journey!
                 </a>
               </div>
             </div>
